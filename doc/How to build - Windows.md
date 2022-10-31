@@ -11,11 +11,11 @@ Download and run the exe accepting all defaults
 
 ### Download sources
 
-Clone the respository.  To place it in C:\src\REPO_NAME (use Slic3r, SuperSlicer or PrusaSlicer as REPO_NAME), run:
+Clone the respository.  To place it in C:\src\REPO_NAME, run:
 ```
 c:> mkdir src
 c:> cd src
-c:\src> git clone https://github.com/supermerill/SuperSlicer.git
+c:\src> git clone https://github.com/melROLL/Mortadella_Slic3r.git
 ```
 
 ### Run the automatic build script
