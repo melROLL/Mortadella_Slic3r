@@ -15,7 +15,7 @@ XCode is available through Apple's App Store, the other three tools are availabl
 
 You have to gitclone  the repository
 ```
-git clone https://github.com/supermerill/SuperSlicer.git
+git clone https://github.com/supermerill/Mortadella_Slic3r.git
 ```
 
 and then you have to clone the profiles submodules
@@ -120,7 +120,7 @@ Works on a fresh installation of MacOS Catalina 10.15.6
 brew update
 brew install cmake git gettext
 brew upgrade
-git clone https://github.com/supermerill/SuperSlicer/
+git clone https://github.com/supermerill/Mortadella_Slic3r/
 cd PrusaSlicer/deps
 mkdir build
 cd build
