@@ -64,11 +64,11 @@ You can download a precompiled package from the release page - it will run witho
 ### How to compile
 
 If you want to compile the source yourself, follow the instructions on one of
-these documentation pages:
+these documentation pages (those instruction are for SuperSlicer if you want to make it for Mortadella_Slic3r, change the github link to this one : https://github.com/melROLL/Mortadella_Slic3r.git ):
 * [Linux](doc/How%20to%20build%20-%20Linux%20et%20al.md)
 * [macOS](doc/How%20to%20build%20-%20Mac%20OS.md)
 * [Windows](doc/How%20to%20build%20-%20Windows.md)
 
 You can also look at the workflow YAML-files for [git actions](https://github.com/supermerill/Slic3r/tree/master/.github/workflows), as they describe how to build from source from a "virgin" dev computer.
 
-if you are on linux you can also use Prosciutto_Slic3r, it is a script that can compile for you SuperSlicer or Mortadella_Slic3r https://github.com/melROLL/Prosciutto_Slic3r
+If you are on linux or running a VM you can also use Prosciutto_Slic3r, it is a script that can compile for you Mortadella_Slic3r or SuperSlicer : https://github.com/melROLL/Prosciutto_Slic3r
