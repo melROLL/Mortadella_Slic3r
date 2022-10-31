@@ -4,9 +4,8 @@
   <img src="media/Mortadella_Slic3r.PNG">
 </p>
 
-Prebuilt Windows, Linux and macOS 64-bit releases are available through the [git releases page](https://github.com/supermerill/SuperSlicer/releases). The Linux & macOS builds aren't tested (by me), just compiled, so please report any bugs that may occur during use.  
+Prebuilt Windows, Linux and macOS 64-bit releases are available through the [git releases page](https://github.com/supermerill/SuperSlicer/releases). The Windows & macOS builds aren't tested, just compiled, so please report any bugs that may occur during use.  
 For **installers**, check the badges above. Windows users can use chocolatey or scoop.  
-Nightly builds are available through the [git actions page](https://github.com/supermerill/SuperSlicer/actions). Click on the build for your platform and then on the archive name (`nightly_win64` or `SuperSlicer-gtk2.AppImage` or `nightly_macos.dmg`) in the "Artifacts" section in the top right corner.
 
 Mortadella_Slic3r takes 3D models (STL, OBJ, AMF) and converts them into G-code
 instructions for FFF printers or PNG layers for mSLA 3D printers. It's compatible with any modern printer based on the RepRap toolchain which is running a firmware based on Marlin, Prusa, Klipper, etc.
@@ -51,13 +50,12 @@ Other major features are:
 
 ### What language is it written in?
 
-Almost everything is written in C++.
-
-The slicing core is the `libslic3r` library, which can be built and used in a standalone way.
-The command-line interface is a thin wrapper over `libslic3r`.
-You can download a precompiled package from the release page - it will run without the need for any dependency.
+Almost everything is written in C++, C and HTML.
 
 ### How to compile
+
+If you are on linux or running a VM you can also use Prosciutto_Slic3r, it is a script that can compile for you Mortadella_Slic3r or SuperSlicer : https://github.com/melROLL/Prosciutto_Slic3r
+
 
 If you want to compile the source yourself, follow the instructions on one of
 these documentation pages (those instruction are for SuperSlicer if you want to make it for Mortadella_Slic3r, change the github link to this one : https://github.com/melROLL/Mortadella_Slic3r.git ):
@@ -65,6 +63,5 @@ these documentation pages (those instruction are for SuperSlicer if you want to 
 * [macOS](doc/How%20to%20build%20-%20Mac%20OS.md)
 * [Windows](doc/How%20to%20build%20-%20Windows.md)
 
-You can also look at the workflow YAML-files for [git actions](https://github.com/supermerill/Slic3r/tree/master/.github/workflows), as they describe how to build from source from a "virgin" dev computer.
 
-If you are on linux or running a VM you can also use Prosciutto_Slic3r, it is a script that can compile for you Mortadella_Slic3r or SuperSlicer : https://github.com/melROLL/Prosciutto_Slic3r
+You can also look at the workflow YAML-files for [git actions](https://github.com/supermerill/Slic3r/tree/master/.github/workflows), as they describe how to build from source from a "virgin" dev computer.
