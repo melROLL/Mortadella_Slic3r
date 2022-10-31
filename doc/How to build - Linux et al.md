@@ -38,7 +38,7 @@ The names of the packages may be different on different distros.
 #### 1. Cloning the repository
 
 
-Cloning the repository is simple thanks to git and Github. Simply `cd` into wherever you want to clone Slic3r code base and run (with Slic3r / supermerill or prusa3D as REPO_NAME and Slic3r / SuperSlicer or PrusaSlicer as SLIC3R_NAME)
+Cloning the repository is simple thanks to git and Github. Simply `cd` into wherever you want to clone Slic3r code base and run.
 ```
 git clone https://www.github.com/REPO_NAME/SLIC3R_NAME
 cd SLIC3R_NAME
