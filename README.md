@@ -15,14 +15,10 @@ Mortadella_Slic3r is based on .[SuperSlicer](https://github.com/supermerill/Supe
 SuperSlicer is based on [PrusaSlicer](https://github.com/prusa3d/PrusaSlicer) by Prusa Research.
 PrusaSlicer is based on [Slic3r](https://github.com/Slic3r/Slic3r) by Alessandro Ranellucci and the RepRap community.
 
-See the [wiki](https://github.com/supermerill/SuperSlicer/wiki) and
-the [documentation directory](doc/) for information about compilation.
-
-### What are Mortadella_Slic3r main features? main new features/differences?
+See the [documentation directory](doc/) for information about compilation.
 
 
-
-### What are SuperSlicer / PrusaSlicer / Slic3r's main features?
+### What are Mortadella_Slic3r / SuperSlicer / PrusaSlicer / Slic3r's main features?
 
 Key features are:
 
