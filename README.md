@@ -10,7 +10,7 @@ For **installers**, check the badges above. Windows users can use chocolatey or 
 Mortadella_Slic3r takes 3D models (STL, OBJ, AMF) and converts them into G-code
 instructions for FFF printers or PNG layers for mSLA 3D printers. It's compatible with any modern printer based on the RepRap toolchain which is running a firmware based on Marlin, Prusa, Klipper, etc.
 
-Mortadella_Slic3r is based on .[SuperSlicer](https://github.com/supermerill/SuperSlicer) by Supermerill  
+Mortadella_Slic3r is based on [SuperSlicer](https://github.com/supermerill/SuperSlicer) by Supermerill  
 SuperSlicer is based on [PrusaSlicer](https://github.com/prusa3d/PrusaSlicer) by Prusa Research.
 PrusaSlicer is based on [Slic3r](https://github.com/Slic3r/Slic3r) by Alessandro Ranellucci and the RepRap community.
 
@@ -54,8 +54,7 @@ Almost everything is written in C++, C and HTML.
 
 ### How to compile
 
-If you are on linux or running a VM you can also use Prosciutto_Slic3r, it is a script that can compile for you Mortadella_Slic3r or SuperSlicer : https://github.com/melROLL/Prosciutto_Slic3r
-
+If you are on linux or running a VM you can also use Prosciutto_Slic3r, it is a script I made that can compile easilly for you Mortadella_Slic3r or SuperSlicer : https://github.com/melROLL/Prosciutto_Slic3r
 
 If you want to compile the source yourself, follow the instructions on one of
 these documentation pages (those instruction are for SuperSlicer if you want to make it for Mortadella_Slic3r, change the github link to this one : https://github.com/melROLL/Mortadella_Slic3r.git ):
@@ -63,5 +62,4 @@ these documentation pages (those instruction are for SuperSlicer if you want to 
 * [macOS](doc/How%20to%20build%20-%20Mac%20OS.md)
 * [Windows](doc/How%20to%20build%20-%20Windows.md)
 
-
-You can also look at the workflow YAML-files for [git actions](https://github.com/supermerill/Slic3r/tree/master/.github/workflows), as they describe how to build from source from a "virgin" dev computer.
+You can also look at the workflow YAML-files for [git actions](https://github.com/supermerill/Slic3r/tree/master/.github/workflows), as they describe how to build SuperSlicer from source from a "virgin" dev computer.
