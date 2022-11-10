@@ -280,9 +280,9 @@ private:
             version = _L("Version") + " " + std::string(SLIC3R_VERSION_FULL);
 
             // credits infornation
-            credits = _L("WaspSlicer is based on SuperSlicer wich is a skinned version of Slic3r, based on PrusaSlicer by Prusa and the original Slic3r by Alessandro Ranellucci & the RepRap community.") + "\n\n" +
+            credits = _L("SuperSlicer is a skinned version of Slic3r, based on PrusaSlicer by Prusa and the original Slic3r by Alessandro Ranellucci & the RepRap community.") + "\n\n" +
                         title + " " + _L("is licensed under the") + " " + _L("GNU Affero General Public License, version 3") + "\n\n" +
-                        _L("Contributions by Melvyn ROLLAND and others.");
+                        _L("Contributions by Vojtech Bubnik, Enrico Turri, Durand Remi, Oleksandra Iushchenko, Tamas Meszaros, Lukas Matena, Vojtech Kral, David Kocik and numerous others.");
 
             title_font = version_font = credits_font = init_font;
         }
@@ -3101,7 +3101,6 @@ wxString GUI_App::current_language_code_safe() const
 		{ "it", 	"it_IT", },
 		{ "ja", 	"ja_JP", },
 		{ "ko", 	"ko_KR", },
-		//{ "mc", 	"mc_MC", }, //monegasque not suported by PRusa Research
 		{ "pl", 	"pl_PL", },
 		{ "uk", 	"uk_UA", },
 		{ "zh", 	"zh_CN", },

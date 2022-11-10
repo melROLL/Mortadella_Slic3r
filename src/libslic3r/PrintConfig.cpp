@@ -5634,7 +5634,7 @@ void PrintConfigDef::init_fff_params()
     def->mode = comAdvancedE | comPrusa;
     def->min = 0;
     def->max_literal = { 100, true };
-    def->aliases = { "wipe_tower_brim" };
+    def->aliases = { "wipe_tower_brim" }; // SuperSlicer 2.3 and before
     def->set_default_value(new ConfigOptionFloatOrPercent(2,false));
 
     def = this->add("wipe_tower_x", coFloat);
