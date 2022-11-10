@@ -85,6 +85,9 @@ CopyrightsDialog::CopyrightsDialog()
 void CopyrightsDialog::fill_entries()
 {
     m_entries = {
+		{ "WaspSlicer"     , "2022 WaspSlicer"                            , "https://github.com/melROLL/Mortadella_Slic3r" },
+		{ "Mortadella_Slic3r"     , "2022 Mortadella_Slic3r"              , "https://github.com/melROLL/Mortadella_Slic3r" },
+		{ "Prosciutto_Slic3r"     , "2022 Prosciutto_Slic3r"              , "https://github.com/melROLL/Prosciutto_Slic3r" },
         { "SuperSlicer"     , "2022 SuperSlicer"                            , "https://github.com/supermerill/SuperSlicer" },
         { "Slic3r"          , "2022 Slic3r"                                 , "https://github.com/slic3r/slic3r" },
         { "Prusaslicer"     , "2022 PrusaResearch"                          , "https://github.com/prusa3d/PrusaSlicer" },
