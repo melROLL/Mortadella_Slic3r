@@ -1,4 +1,4 @@
-# Translation file for Minegasque
+# Translation file for french
 # Copyright (C) 2021
 # This file is distributed under the same license as Slic3r.
 #
@@ -12,7 +12,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language:mc\n"
+"Language:fr\n"
 
 msgid "!! Can be unstable in some os distribution !!"
 msgstr ""
@@ -12318,7 +12318,7 @@ msgstr ""
 "créée par <b>%1% %4%</b>.\n"
 "\n"
 "La configuration plus récente doit-elle être importée ?\n"
-"Si sci, votre configuration active sera sauvegardée avant l'importation de "
+"Si oui, votre configuration active sera sauvegardée avant l'importation de "
 "la nouvelle configuration."
 
 msgid ""

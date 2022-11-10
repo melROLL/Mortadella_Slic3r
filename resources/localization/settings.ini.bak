@@ -24,8 +24,8 @@ percent_error_similar = 0.4
 # max number of proposed translation per item. Work with percent_error_similar.
 max_similar = 3
 # strings written in the header
-language = monegasque
-language_code = mc
+language = french
+language_code = fr
 
 # input is the pot (or po) where the msgid are picked
 input = Slic3r.pot
