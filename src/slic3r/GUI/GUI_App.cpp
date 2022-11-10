@@ -3101,6 +3101,7 @@ wxString GUI_App::current_language_code_safe() const
 		{ "it", 	"it_IT", },
 		{ "ja", 	"ja_JP", },
 		{ "ko", 	"ko_KR", },
+		//{ "mc", 	"mc_MC", }, //monegasque not suported by PRusa Research
 		{ "pl", 	"pl_PL", },
 		{ "uk", 	"uk_UA", },
 		{ "zh", 	"zh_CN", },
