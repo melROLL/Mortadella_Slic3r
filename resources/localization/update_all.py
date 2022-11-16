@@ -2,7 +2,7 @@ import os
 import sys
 import subprocess
 
-languages = ["ca", "cs", "de", "en", "es", "fr", "hu", "it", "ja", "ko", "ko_KR", "mc", "nl", "pl", "pt_BR", "ru", "tr", "uk", "zh_CN", "zh_TW_copy"];
+languages = ["ca", "cs", "de", "en", "es", "fr", "hu", "it", "ja", "ko", "ko_KR", "nl", "pl", "pt_BR", "ru", "tr", "uk", "zh_CN", "zh_TW_copy"];
 print(sys.getrecursionlimit())
 for lang in languages:
 	# if 'y' != input("translating "+lang+"? (y/n): "):

@@ -2,6 +2,13 @@
 // fast_float by João Paulo Magalhaes
 
 
+// with contributions from Eugene Golushkov
+// with contributions from Maksim Kita
+// with contributions from Marcin Wojdyr
+// with contributions from Neal Richardson
+// with contributions from Tim Paine
+// with contributions from Fabio Pellacini
+
 
 // Permission is hereby granted, free of charge, to any
 // person obtaining a copy of this software and associated
