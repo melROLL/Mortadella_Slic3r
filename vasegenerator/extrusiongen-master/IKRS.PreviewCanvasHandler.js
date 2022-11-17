@@ -69,7 +69,7 @@ IKRS.PreviewCanvasHandler = function( bezierCanvasHandler,
 
     // Prepare a second scene that contains the background only
     //var backgroundTexture = THREE.ImageUtils.loadTexture( "bg_preview.png" );
-    var backgroundTexture = THREE.ImageUtils.loadTexture( _DILDO_CONFIG.IMAGES.PREVIEW_BACKGROUND );
+    var backgroundTexture = THREE.ImageUtils.loadTexture( _VASE_CONFIG.IMAGES.PREVIEW_BACKGROUND );
     var bg = new THREE.Mesh(
 	new THREE.PlaneGeometry( 2, 2, 0 ),
 	new THREE.MeshBasicMaterial( { map: backgroundTexture } )

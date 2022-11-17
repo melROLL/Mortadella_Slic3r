@@ -1,5 +1,5 @@
 
-# Path Extrusion Generator (Dildo Generator)
+# Path Extrusion Generator (Vase Generator)
 
 * author   Ikaros Kappler
 * date     2013-09-11
@@ -9,7 +9,7 @@
 * version  0.3.21
 
 
-Some friends and me were using this tool to generate custom dildo molds and to cast
+Some friends and me were using this tool to generate custom vase molds and to cast
 RTV silicone.
 
 
@@ -18,16 +18,16 @@ CC BY-NC-SA
 Please keep the '@author' tags when sharing the code.
 
 
-Website: [Dildo-Generator.com](http://www.dildo-generator.com "Dildo-Generator.com")
+Website: [Vase-Generator.com](http://www.vase-generator.com "Vase-Generator.com")
 
-![Dildo-Generator screenshot](screenshots/Screenshot-05162014-101050-PM.png "Screenshot of the Dildo-Generator website")
+![Vase-Generator screenshot](screenshots/Screenshot-05162014-101050-PM.png "Screenshot of the Vase-Generator website")
 
 ![Screenshot of a mold model](screenshots/Screenshot-12142013-082528-PM.png "Screenshot of the mold model")
 
 
 
 
-If you have questions about the project just send a email to info@dildo-generator.com.
+If you have questions about the project just send a email to info@vase-generator.com.
 
 
 Please excuse this dirty code.
@@ -35,7 +35,7 @@ Please excuse this dirty code.
 
 ### Notes
  * Currently the gallery is disabled.
- * Storing dildos and loading from the database is disabled.
+ * Storing vases and loading from the database is disabled.
 
 Of course you can build models, save setups to your hard drive, load setups from your hard drive and
 download STL files as usual.
@@ -45,7 +45,7 @@ download STL files as usual.
 Note that since version 0.3.4 the gallery has social media integration (using
 a Two-Click plugin).
 
-Note that since version 0.3.0 the app is capable to store dildo designs in a
+Note that since version 0.3.0 the app is capable to store vase designs in a
 databse.
 
 Note that since version 0.2.37 the app tries to store designs in cookies. Before
@@ -53,9 +53,9 @@ no data had been saved anywhere. I switched to a new privacy policy.
 
 
 ### How it works
-![Photo of a printed dildo mold](img/photo-1.jpg "Photo of the printed mold")
+![Photo of a printed vase mold](img/photo-1.jpg "Photo of the printed mold")
 
-![Photo of two casted dildos](img/photo-2.jpg "Photo of two casted dildos")
+![Photo of two casted vases](img/photo-2.jpg "Photo of two casted vases")
 
 
 ### Changelog
@@ -87,7 +87,7 @@ no data had been saved anywhere. I switched to a new privacy policy.
 [2014-11-10] v0.3.17
  - Moved BEZIER_CANVAS_WIDTH/-HEIGHT and PREVIEW_CANVAS_WIDTH/-HEIGHT 
    from the main.js file to the config.js file. They are now member
-   variables in the _DILDO_CONFIG object.
+   variables in the _VASE_CONFIG object.
  - Modified the IKRS.BezierCanvasHandler to match the new setting
    locations.
  - Added the getBezierCanvas() and getPreviewCanvas() functions to
@@ -136,10 +136,10 @@ no data had been saved anywhere. I switched to a new privacy policy.
  - Added the rdbata parameter to pass reduced bezier path data to the 
    main.html file.
  - Added a 'Load' button to the gallery; if a user allowed to download
-   his/her dildo model, it can now be restored in 3D directly from
+   his/her vase model, it can now be restored in 3D directly from
    the gallery.
  - Moved the table_structure.sql file to the ./gallery/ directory.
- - Moved the store_dildo.js file to the ./gallery/ directory.
+ - Moved the store_vase.js file to the ./gallery/ directory.
  - Added some more name presets to the publish dialog.
 
 [2014-08-15] v0.3.9
@@ -177,8 +177,8 @@ no data had been saved anywhere. I switched to a new privacy policy.
 [2014-07-24] v0.3.0 (new features published: storing in DB and gallery)
  - Feature published: store designs in an online database
  - Feature published: view stored designs in the gallery.
- - Added _DILDO_CONFIG.AUTOLOAD_ENABLED to the config.js file.
- - Added _DILDO_CONFIG.DEFAULT_BEZIER_JSON to the config.js file.
+ - Added _VASE_CONFIG.AUTOLOAD_ENABLED to the config.js file.
+ - Added _VASE_CONFIG.DEFAULT_BEZIER_JSON to the config.js file.
  - Added the 'disabled_by_moderator' column to the database table.	
  - Added the 'keywords' column to the databse table.
  - Added the getBezierScreenshotData() function to the main.js file.
@@ -188,12 +188,34 @@ no data had been saved anywhere. I switched to a new privacy policy.
  - Fixed a bug in the screenshot storing routine (for existing IDs).
  - Added the gallery script in ./gallery/index.php (only server version).
  - Added the date_created and date_upated fields to the database table structure.
-tils.js file.
+
+[2014-07-16] v0.2.38
+ - Added the getCurrentVaseID() function to main.js file.
+ - Added the setCurrentVaseID(vaseID) function to the main.js file.
+ - Added the publish_vase.js file which handles the publishing process.
+ - Added the publishVaseDesign() function to the main.js file.
+ - Added _VASE_CONFIG.PUBLISHING_URL to the config.js file.
+ - Added member function setVisibility(visible) to the IKRS.MessageBox.js class.
+ - Fixed a bug in IKRS.MessageBox.show(...) function: calling show(...) twice
+   made the message box invisible again.
+ - Added new columns to the database/table:
+    + name
+    + user_name
+    + email_address
+    + hide_email_address
+    + allow_download
+    + allow_edit [currently not in use]
+    + preview_image (base64 string)
+    + public_hash   (to hide real database IDs).
+   See table_structure.sql for details.
+ - Added the new storage/publishing features to the main.js and the 
+   store_custom_vase.php files.
+ - Added isHexadecimal() to the IKRS.Utils.js file.
 
 [2014-07-13] v0.2.37
  - Added the Base64 encoder/decoder class (should later replace base64-binary).
  - Added the IKRS.Utils.isNumeric function.
- - Activated the AUTOSAVE function which tries to store dildo designs in cookie!
+ - Activated the AUTOSAVE function which tries to store vase designs in cookie!
 
 [2014-07-04] v0.2.36
  - Added two new mesh features
@@ -210,7 +232,7 @@ tils.js file.
  - Added the IKRS.ShapeFactory class and subclasses for circles and ovals.
 
 [2014-07-02] v2.0.35
- - store_custom_dildo.php: changed the submit method to HTTP POST.
+ - store_custom_vase.php: changed the submit method to HTTP POST.
  - Added the setCookie() and getCookie() functions (main.js).
  - Added the saveInCookie() and loadFromCookie() functions (main.js, still testing, 
    not yet in use).
@@ -224,7 +246,7 @@ tils.js file.
  - Replaced the remote (!) save function by a less brute-force solution
    by using AJAX.
  - Added the idForm form to store remote IDs inside.
- - Added the UPDATE function for existing dildo designs (depending on passed id
+ - Added the UPDATE function for existing vase designs (depending on passed id
    and user_id); if id is missing, a regular INSERT is made.
  
  - Note: Merchants should have a look at the new function in the 
@@ -251,13 +273,13 @@ tils.js file.
 [2014-06-19] v0.2.29
  - Made the canvas background images configurable. See the config.js file 
    near lines 52 and 59: 
-   _DILDO_CONFIG.IMAGES.BEZIER_BACKGROUND and
-   _DILDO_CONFIG.IMAGES.PREVIEW_BACKGROUND
+   _VASE_CONFIG.IMAGES.BEZIER_BACKGROUND and
+   _VASE_CONFIG.IMAGES.PREVIEW_BACKGROUND
 
 [2014-06-17] v0.2.27
  - Since this version there is a code snippet example explaining how to
-   to store dildo design on a server (in a database). This is just an example
-   and not active. The site dildo-generator.com does _not_ store any design
+   to store vase design on a server (in a database). This is just an example
+   and not active. The site vase-generator.com does _not_ store any design
    data.
 
 [2014-05-16] v0.2.20
@@ -309,7 +331,7 @@ tils.js file.
 TODO
 ----
 [2014-10-27]
- - Check if $_DILDO_SETTINGS["gallery_settings"]["DILDO_UPDATE_ALLOWED"] = TRUE
+ - Check if $_VASE_SETTINGS["gallery_settings"]["VASE_UPDATE_ALLOWED"] = TRUE
    works (in the inc/config.inc.php file).
 
 [2013-10-15]

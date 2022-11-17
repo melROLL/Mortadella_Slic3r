@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html> 
 <head> 
-<title>Extrusion and Revolution Solids - A Dildo Generator</title> 
+<title>Extrusion and Revolution Solids - A Vase Generator</title> 
 <meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="description" content="A bleeding edge HTML5/WebGL/THREE.js dildo generator for 3D printing." />
+<meta name="description" content="A bleeding edge HTML5/WebGL/THREE.js vase generator for 3D printing." />
 <meta name="author" content="Ikaros Kappler" />
-<meta name="keywords" content="dildo, generator, three.js, webgl, html5, bleeding edge, dildo generator, javascript" />
+<meta name="keywords" content="vase, generator, three.js, webgl, html5, bleeding edge, vase generator, javascript" />
 <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 <link rel="stylesheet" type="text/css" media="screen" href="moo_tools_drop_down_menu/css/dropdown.css" />
 
@@ -15,7 +15,7 @@
   background-color: #f8f8f8;
   }
 </style>
-<script src="js/function.isDildoGeneratorDomain.js" type="text/javascript"></script>
+<script src="js/function.isVaseGeneratorDomain.js" type="text/javascript"></script>
 <script src="js/config.js" type="text/javascript"></script>
 <script src="js/merchant_tools.js" type="text/javascript"></script>
 
@@ -29,10 +29,10 @@
 <div id="version_tag"></div>
 
 <div id="gallery_links">
-  Draw your shape alt=" Draw your shape" align="middle" />Gallery</a>
+  To the <a href="gallery/" target="_blank"><img src="img/Icon_Gallery_A.png" width="24" height="23" alt="To the gallery" align="middle" />Gallery</a>
   <script language="Javascript">
-     if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_PUBLISH_MESH_MENU ) {
-    
+     if( _VASE_CONFIG && !_VASE_CONFIG.HIDE_PUBLISH_MESH_MENU ) {
+        document.write( "| <button onclick=\"publishVaseDesign()\">Publish ...</button>\n" );
      } // END if
   </script>
 </div>
@@ -58,16 +58,16 @@
   <a href="https://github.com/IkarosKappler/extrusiongen.git" target="_blank" style="text-decoration: none;">
     <img src="img/GitHub.png" width="32" height="32" alt="Clone at Github.com" style="border: 0;" />
   </a>
-  <a href="mailto:info@dildo-generator.com" target="_blank" style="text-decoration: none;">
-    <img src="img/Email.png" width="32" height="32" alt="Send Bug reports to info@dildo-generator.com" style="border: 0;" />
+  <a href="mailto:info@vase-generator.com" target="_blank" style="text-decoration: none;">
+    <img src="img/Email.png" width="32" height="32" alt="Send Bug reports to info@vase-generator.com" style="border: 0;" />
   </a>
-  <a href="http://twitter.com/dildogenerator" target="_blank" style="text-decoration: none;">
-    <img src="img/Twitter.png" width="32" height="32" alt="Follow us on Twitter at #dildogenerator" style="border: 0;" />
+  <a href="http://twitter.com/vasegenerator" target="_blank" style="text-decoration: none;">
+    <img src="img/Twitter.png" width="32" height="32" alt="Follow us on Twitter at #vasegenerator" style="border: 0;" />
   </a>
-  <a href="https://www.flickr.com/photos/dildo-generator/" target="_blank" style="text-decoration: none;">
-    <img src="img/Flickr.png" width="32" height="32" alt="Find screenshots and photos of dildo making at flickr" style="border: 0;" />
+  <a href="https://www.flickr.com/photos/vase-generator/" target="_blank" style="text-decoration: none;">
+    <img src="img/Flickr.png" width="32" height="32" alt="Find screenshots and photos of vase making at flickr" style="border: 0;" />
   </a>
-  <a href="http://dildo-generator.spreadshirt.de/" target="_blank" style="text-decoration: none;">
+  <a href="http://vase-generator.spreadshirt.de/" target="_blank" style="text-decoration: none;">
     <img src="img/Spreadshirt.png" width="32" height="32" alt="Order a fan shirt" style="border: 0;" />
   </a>
   <br/>
@@ -82,7 +82,7 @@
   <br/>
   <script>
     // Add 3D-Print link?
-    if( isDildoGeneratorDomain() ) {
+    if( isVaseGeneratorDomain() ) {
         document.write( "[<a href=\"#\" onclick=\"order_print()\" style=\"color: #ef0000; font-size: 8pt;\">Don't have a 3D printer?</a>]<br/>\n" );
     }
     </script>
@@ -243,7 +243,7 @@
 	<td style="text-align: center;">
 	  <div style="margin-top: 55px; margin-left: 25px;">
 	    <script language="Javascript">
-	      if( true || isDildoGeneratorDomain() ) {
+	      if( true || isVaseGeneratorDomain() ) {
 	      document.write( "Featured by:<br/>\n" );
 	      document.write( "<table border=\"0\">\n" );
 		document.write( "<tr><td style=\"padding: 10px;\">\n" );  
@@ -535,7 +535,7 @@
     </tr>
   </table>
   <script language="Javascript">
-    if( isDildoGeneratorDomain() )
+    if( isVaseGeneratorDomain() )
         document.write( "<br/><div style=\"font-size: 7pt; text-align: right; color: #686868;\">Please note that not all of these colors are available in silicone.</div>\n" );
   </script>
 </div>
@@ -625,7 +625,7 @@
 <script type="text/javascript" src="js/IKRS.MessageBox.js"></script>
 
 <script type="text/javascript" src="js/presets.js"></script>
-<script type="text/javascript" src="gallery/publish_dildo.js"></script>
+<script type="text/javascript" src="gallery/publish_vase.js"></script>
 
 <!-- This is the main script -->
 <script type="text/javascript" src="js/main.js"></script>
@@ -642,10 +642,10 @@
 
 
 
-<!-- Add a hidden form to store the created dildo ID in -->
+<!-- Add a hidden form to store the created vase ID in -->
 <form name="idForm">
-  <input type="hidden" name="dildoID" id="dildoID" value="-1" />
-  <input type="hidden" name="publicDildoHash" id="publicDildoHash" value="" />
+  <input type="hidden" name="vaseID" id="vaseID" value="-1" />
+  <input type="hidden" name="publicVaseHash" id="publicVaseHash" value="" />
 </form>
 
 
@@ -658,11 +658,11 @@
 	  <ul>
 	    <li><a href="#" onclick="newScene()">New</a></li>
 	    <script language="Javsscript">
-	      if( _DILDO_PRESETS )
-	          populate_dildo_presets_menu( _DILDO_PRESETS );
+	      if( _VASE_PRESETS )
+	          populate_vase_presets_menu( _VASE_PRESETS );
 	    </script>
 	    <script language="Javascript">
-	      if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_SAVE_FILE_ITEM ) {
+	      if( _VASE_CONFIG && !_VASE_CONFIG.HIDE_SAVE_FILE_ITEM ) {
 	      document.write( "<li>\n" +
 		"<a href=\"#\" onclick=\"exportZIP()\">Save (*.zip)</a>\n" +
 		"<form name=\"zip_form\">\n" +
@@ -681,7 +681,7 @@
 	    </li>
 	    -->
 	      <script language="Javascript">
-	      if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_LOAD_FILE_ITEM ) {
+	      if( _VASE_CONFIG && !_VASE_CONFIG.HIDE_LOAD_FILE_ITEM ) {
 	      document.write( "<li>\n" +
 		  "<form name=\"zip_import_form\">\n" +
 		    "<a href=\"#\">Load (*.zip)</a>\n" +
@@ -704,7 +704,7 @@
 	    </li>
 	-->
 	    <script>
-	      if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_EXPORT_MESH_MENU ) {
+	      if( _VASE_CONFIG && !_VASE_CONFIG.HIDE_EXPORT_MESH_MENU ) {
 	      document.write( "<li><a href=\"#\" class=\"popout\">Export Mesh &gt;</a>\n" +
 		"<ul>\n" +
 		  "<li><a href=\"#\" onclick=\"exportSTL()\">Surface Tesselation (*.stl)</a></li>\n" +	
@@ -713,8 +713,8 @@
 		"</li>\n"
 	      );
 	      } // END if
-	      if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_PUBLISH_MESH_MENU ) {
-	       
+	      if( _VASE_CONFIG && !_VASE_CONFIG.HIDE_PUBLISH_MESH_MENU ) {
+	          document.write( "<li><a href=\"#\" onclick=\"publishVaseDesign()\">Publish ...</a></li>\n" );
 	      } // END if
 	    </script>
 	    <li><a href="#" onclick="saveShape();">Export shape (*.json)</a></li>
@@ -732,11 +732,11 @@
 	
 	<script>
 	  // Add the 3D-Print menu?
-	  if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_PRINT_MENU ) { //isDildoGeneratorDomain() ) {
+	  if( _VASE_CONFIG && !_VASE_CONFIG.HIDE_PRINT_MENU ) { //isVaseGeneratorDomain() ) {
 	  document.write( 
 	  "<li class=\"heading\"><a href=\"#\">3D Print</a>\n" +	    
 	    "<ul>\n" +
-	      "  <li><a href=\"#\" onclick=\"" + _DILDO_CONFIG.ORDER_PRINT_ACTION + "\">Order Print ...</a></li>\n" +
+	      "  <li><a href=\"#\" onclick=\"" + _VASE_CONFIG.ORDER_PRINT_ACTION + "\">Order Print ...</a></li>\n" +
 	      "</ul>\n" +
 	    "</li>\n"
 	  );
@@ -754,7 +754,7 @@
 	    </li>
 	    <li><a href="#" onclick="open_faqs();">FAQ</a></li>
 	    <li><a href="#" onclick="open_faqs('general_publish');">How to publish?</a></li>
-	    <li><a href="https://www.int2byte.de/public/Dildo_Slides_D.pdf" target="_blank">Making a Dildo (PDF)</a></li>
+	    <li><a href="https://www.int2byte.de/public/Vase_Slides_D.pdf" target="_blank">Making a Vase (PDF)</a></li>
 	    <li><a href="#" onclick="display_bezier_string();">Display B&eacute;zier String</a></li>
 	    <li><a href="#" onclick="show_bezier_input_dialog();">Paste B&eacute;zier String ...</a></li>
 	    <li><a href="#" onclick="about()">About</a></li> 
@@ -772,10 +772,10 @@
 
 
 <script>
-// Add the legal notice if domain is dildo-generator.com or dildogenerator.com
+// Add the legal notice if domain is vase-generator.com or vasegenerator.com
 // Meh.
-if( isDildoGeneratorDomain() ) {
-   document.write( "<div id=\"impressum\"><a href=\"impressum.html\" target=\"dildogenerator_impressum\" style=\"color: #000000;\">Impressum</a></div>" );
+if( isVaseGeneratorDomain() ) {
+   document.write( "<div id=\"impressum\"><a href=\"impressum.html\" target=\"vasegenerator_impressum\" style=\"color: #000000;\">Impressum</a></div>" );
 }
 
 </script>
@@ -804,7 +804,7 @@ if( isDildoGeneratorDomain() ) {
   function initPiwik() {
         var fileref = document.createElement("script");
         fileref.setAttribute("type","text/javascript");
-        fileref.setAttribute("src", "piwik.dildogenerator.js");
+        fileref.setAttribute("src", "piwik.vasegenerator.js");
         document.getElementsByTagName("head")[0].appendChild( fileref );
   }
   window.addEventListener( "load",
