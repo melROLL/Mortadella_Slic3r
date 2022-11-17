@@ -1265,10 +1265,7 @@ function order_print() {
 }
 
 function open_faqs( anchor ) {
-    window.open( "faq.html" + (anchor ? "#"+anchor : ""),
-		 "dildogenerator_faq",
-		 "height=480,width=800,location=yes,toolbar=no,dependent=no,scrollbars=yes"
-	       );
+
 }
 
 function open_legal_notice() {
