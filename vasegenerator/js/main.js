@@ -600,8 +600,7 @@ function updateBezierStatistics( source, event ) {
     volume_cubeMillimeters *= 0.75;
 
     var volume_cubeMilliLiters     = volume_cubeMillimeters / 1000.0;
-    var lowDensity                 = 0.76;
-    var highDensity                = 1.07;
+    var highDensity                = 1;
     var imperialCup                = 284.130642624675; // ml
     var usCup                      = 236.5882365;      // ml
     var weight_lowDensity          = roundToDigits((volume_cubeMillimeters/1000)*lowDensity,0);
@@ -613,8 +612,7 @@ function updateBezierStatistics( source, event ) {
 	[ "Volume",       roundToDigits((volume_cubeMillimeters/1000.0),1,3),                                                     "cm<sup>3</sup> | ml"  ],
 	[ "",             roundToDigits((volume_cubeMilliLiters/imperialCup),1,3),                                                " Imperial Cups"  ],
 	[ "",             roundToDigits((volume_cubeMilliLiters/usCup),1,3),                                                      " US Cups"  ],
-	[ "Weight<br/>&nbsp;[low density silicone, " + lowDensity + "g/cm<sup>3</sup>]", roundToDigits(weight_lowDensity,0,3),    "g"  ],
-	[ "Weight<br/>&nbsp;[high density silicone, " + highDensity + "g/cm<sup>3</sup>]", roundToDigits(weight_highDensity,0,3), "g"  ]
+[ "Weight<br/>&nbsp;[Material with density =, " + highDensity + "g/cm<sup>3</sup>]", roundToDigits(weight_highDensity,0,3), "g"  ]
     ];
     document.getElementById( "volume_and_weight" ).innerHTML = makeTable( tableData );
 
@@ -1238,12 +1236,10 @@ function order_print() {
 	"<div style=\"text-align: left; margin-left: 125px;\">\n" +
 	"<ul>\n" +
 	"  <li>\n" +
-	"    <a href=\"http://3d-druck-shop.youin3d.com/online-kaufen/3d-drucker-reprap-zubehoer-einzelteile-bausaetze-kits-ersatzteile/dildogenerator-gussform-3d-gedruckte-gussform-und-silikon-fuer-3d-druck-sexspielzeug/\" target=\"_blank\">Order without silicone (just the mold)</a>\n" +
-	"    </a>\n" +
+	"     </a>\n" +
 	"  </li>\n" +
 	"  <li>\n" +
-	"    <a href=\"http://3d-druck-shop.youin3d.com/online-kaufen/3d-drucker-reprap-zubehoer-einzelteile-bausaetze-kits-ersatzteile/dildogenerator-diy-kit-silikon-fuer-3d-druck-sexspielzeug-gussform/\" target=\"_blank\">Order with silicone</a>\n" +
-	"  </li>\n" +
+	"   </li>\n" +
 	"</ul>\n" +
 	//"Many have a 3D printer.<br/>\n" + 
 	"The guys, girls, me and the cyborgs there will support<br/>\n" +

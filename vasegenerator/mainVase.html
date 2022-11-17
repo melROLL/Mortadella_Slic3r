@@ -67,12 +67,6 @@
 <div id="status_bar">Status</div>
 
 <div id="preview_controls" style="position: absolute; left: 532px; top: 838px; width: 256px; text-align: right;">
-  
-  Zoom
-  <button onclick="decreaseZoomFactor(true);">-</button>
-  <button onclick="increaseZoomFactor(true);">+</button>
-
-  
 </div>
 
 
@@ -94,18 +88,8 @@
 	</form>
       </td>
       
-      
       <td valign="top" align="right">
-	
-	Zoom
-	<button onclick="bezierCanvasHandler.decreaseZoomFactor(true);" class="zoom_button">-</button>
-	<button onclick="bezierCanvasHandler.increaseZoomFactor(true);" class="zoom_button">+</button>
-	<button onclick="acquireOptimalBezierView();" class="zoom_button">&#10530;</button><br/>
 
-	Size
-	<button onclick="bezierCanvasHandler.scaleBezierPathUniform(1.05);">+5%</button>
-	<button onclick="bezierCanvasHandler.scaleBezierPathUniform(1.0/1.05);">-5%</button><br/>
-	
       </td>
     </tr>
   </table>
@@ -462,11 +446,19 @@
 
 <!-- An area for the volume display -->
 <div id="informational">
-  <h3>Size, Volume</h3>
-   <div id="volume_and_weight">-</div>
+   <div id="volume_and_weight"></div>
    <br/>
-   <div id="comment">
-   </div>
+     <h3> Zoom 3D <h3>
+  <button onclick="decreaseZoomFactor(true);">-</button>
+  <button onclick="increaseZoomFactor(true);">+</button>
+   <br/>
+	<h3> Zoom Drawing <h3>
+	<button onclick="bezierCanvasHandler.decreaseZoomFactor(true);" class="zoom_button">-</button>
+	<button onclick="bezierCanvasHandler.increaseZoomFactor(true);" class="zoom_button">+</button>
+	<button onclick="acquireOptimalBezierView();" class="zoom_button">&#10530;</button><br/>
+	<h3> Size <h3>
+	<button onclick="bezierCanvasHandler.scaleBezierPathUniform(1.05);">+5%</button>
+	<button onclick="bezierCanvasHandler.scaleBezierPathUniform(1.0/1.05);">-5%</button><br/>
 </div>
 
 
@@ -579,13 +571,6 @@
 	    </script>
 	    <script language="Javascript">
 	      if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_SAVE_FILE_ITEM ) {
-	      document.write( "<li>\n" +
-		"<a href=\"#\" onclick=\"exportZIP()\">Save (*.zip)</a>\n" +
-		"<form name=\"zip_form\">\n" +
-		  "<input type=\"hidden\" name=\"compress_zip\" value=\"0\" />\n" +
-		  "</form>\n" +
-		"</li>\n"
-	      );
 	      }
 	    </script>
 	    <!--
@@ -598,16 +583,7 @@
 	    -->
 	      <script language="Javascript">
 	      if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_LOAD_FILE_ITEM ) {
-	      document.write( "<li>\n" +
-		  "<form name=\"zip_import_form\">\n" +
-		    "<a href=\"#\">Load (*.zip)</a>\n" +
-		    "<div class=\"open_file_menu_div\">\n" +
-		      "<input type=\"file\" name=\"zip_upload_file\" accept=\"application/zip\" class=\"open_file_menu_input\" onchange=\"importZIP();\" />\n" +
-		    "</div>\n" +
-		  "</form>\n" +
-	      "</li>\n"
-	      );
-	      }
+}
 	      </script>
 	      <!--
 	      <form name="zip_import_form">		
@@ -632,16 +608,6 @@
 	      if( _DILDO_CONFIG && !_DILDO_CONFIG.HIDE_PUBLISH_MESH_MENU ) {
 	      } // END if
 	    </script>
-	    <li><a href="#" onclick="saveShape();">Export shape (*.json)</a></li>
-	    <li>
-	      <!-- <a href="#" onclick="alert('no action assigned yet')">Import shape (*.json)</a> -->
-	       <form name="bezier_file_upload_form">		
-		<a href="#">Import shape (*.json)</a>
-		<div class="open_file_menu_div">
-		  <input type="file" name="bezier_json_file" accept="application/zip" class="open_file_menu_input" onchange="loadShape();" />
-		</div>
-	      </form>
-	    </li>
 	  </ul>
 	</li>
 	

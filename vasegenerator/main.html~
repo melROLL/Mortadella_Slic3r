@@ -536,8 +536,7 @@
   </table>
   <script language="Javascript">
     if( isDildoGeneratorDomain() )
-        document.write( "<br/><div style=\"font-size: 7pt; text-align: right; color: #686868;\">Please note that not all of these colors are available in silicone.</div>\n" );
-  </script>
+    </script>
 </div>
 
 
