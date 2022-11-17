@@ -473,8 +473,6 @@ static void add_tabs_as_menu(wxMenuBar* bar, MainFrame* main_frame, wxWindow* ba
             main_frame->select_tab(MainFrame::ETabType::FilamentSettings);
         else if (title == _L("Printer Settings"))
             main_frame->select_tab(MainFrame::ETabType::PrinterSettings);
-      //  else if (title == _L("Vase Generator"))
-        //    main_frame->select_tab(MainFrame::ETabType::VaseGenerator);    
 
         // update markers for selected/unselected menu items
         update_marker_for_tabs_menu(bar, title, 0, main_frame->get_layout());
@@ -1556,12 +1554,12 @@ static wxMenu* generate_help_menu()
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog(SLIC3R_DOWNLOAD, nullptr, false); });
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("%s wiki"), SLIC3R_APP_NAME), wxString::Format(_L("Open the %s wiki in your browser"), SLIC3R_APP_NAME),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://github.com/" SLIC3R_GITHUB "/wiki"); });
-
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("%s website"), SLIC3R_APP_NAME), _L("Open the Slic3r website in your browser"),
-    [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("https://www.3dwasp.com/download/download-category/manuali/"); });
-    
-    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Printers Manual")), _L("Open Wasp Manual page in your browser"),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
+    //#        my $versioncheck = $self->_append_menu_item($helpMenu, "Check for &Updates...", "Check for new Slic3r versions", sub{
+    //#            wxTheApp->check_version(1);
+    //#        });
+    //#        $versioncheck->Enable(wxTheApp->have_version_check);
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Slic3r Manual")),
         wxString::Format(_L("Open the Slic3r Manual in your browser")),
         //            [this](wxCommandEvent&) { wxGetApp().open_web_page_localized("http://manual.slic3r.org"); });
