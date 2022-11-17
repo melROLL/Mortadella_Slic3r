@@ -12,7 +12,7 @@
     window.dg_ratingDoneFor = [];
 
     /**
-     * @param hash   - The vase hash.
+     * @param hash   - The dildo hash.
      * @param id     - yeahmm ... the id.
      * @param rating - in [0..5]
      **/
@@ -20,7 +20,7 @@
 
 	console.debug( "hash=" + hash + ", id=" + id + ", rating=" + rating );
 
-	$.ajax( { url     : "//www.vase-generator.com/gallery/addRating.ajax.php",
+	$.ajax( { url     : "//www.dildo-generator.com/gallery/addRating.ajax.php",
 		  type    : 'get',
 		  data    : { "public_hash" : hash,
 			      "id"          : id,
@@ -45,12 +45,12 @@
 
     };
 
-    window.dg_highlightStar = function( vaseID, spanBase, starNumber, highlight, currentRating ) {
+    window.dg_highlightStar = function( dildoID, spanBase, starNumber, highlight, currentRating ) {
 
 	var spanID = spanBase + starNumber;
-	//console.debug( "window.dg_ratingDoneFor[starNumber]=" + window.dg_ratingDoneFor[vaseID] );
-	if( window.dg_ratingDoneFor[vaseID] ) {
-	    currentRating = window.dg_ratingDoneFor[vaseID];	    
+	//console.debug( "window.dg_ratingDoneFor[starNumber]=" + window.dg_ratingDoneFor[dildoID] );
+	if( window.dg_ratingDoneFor[dildoID] ) {
+	    currentRating = window.dg_ratingDoneFor[dildoID];	    
 	}
 
 	if( highlight ) {
@@ -65,7 +65,7 @@
     };
 
 
-    window.dg_setRating = function( vaseID, spanBase, starNumber, highlight, currentRating ) {
+    window.dg_setRating = function( dildoID, spanBase, starNumber, highlight, currentRating ) {
 	console.debug( "[dg_setRating] spanBase=" + spanBase + ", starNumber=" + starNumber + ", highlight=" + highlight + ", currentRating=" + currentRating );
 	for( var i = 0; i < 5; i++ ) {
 	    var spanID = spanBase + i;
@@ -74,8 +74,8 @@
 	    else
 		$( "#" + spanID ).css( "color", "#000000" );
 	}
-	console.debug( "setting rating for (local) " + vaseID + ": " + currentRating );
-	window.dg_ratingDoneFor[vaseID] = currentRating;
+	console.debug( "setting rating for (local) " + dildoID + ": " + currentRating );
+	window.dg_ratingDoneFor[dildoID] = currentRating;
     };
  
 

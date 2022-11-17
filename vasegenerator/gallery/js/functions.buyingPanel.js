@@ -14,19 +14,19 @@
 
 	window._DG_BUYINGPANEL = { };
 
-	window._DG_BUYINGPANEL.addVaseMouldFileToCart = function( vaseID, vaseHash, buttonID ) {
-	    window._DG_BUYINGPANEL._displayComingSoon( vaseID, vaseHash, buttonID );
+	window._DG_BUYINGPANEL.addDildoMouldFileToCart = function( dildoID, dildoHash, buttonID ) {
+	    window._DG_BUYINGPANEL._displayComingSoon( dildoID, dildoHash, buttonID );
 	};
 
-	window._DG_BUYINGPANEL.addVaseMouldPrintToCart = function( vaseID, vaseHash, buttonID ) {
-	    window._DG_BUYINGPANEL._displayComingSoon( vaseID, vaseHash, buttonID );
+	window._DG_BUYINGPANEL.addDildoMouldPrintToCart = function( dildoID, dildoHash, buttonID ) {
+	    window._DG_BUYINGPANEL._displayComingSoon( dildoID, dildoHash, buttonID );
 	};
 
-	window._DG_BUYINGPANEL.addVaseFileToCart = function( vaseID, vaseHash, buttonID ) {
-	    window._DG_BUYINGPANEL._displayComingSoon( vaseID, vaseHash, buttonID );
+	window._DG_BUYINGPANEL.addDildoFileToCart = function( dildoID, dildoHash, buttonID ) {
+	    window._DG_BUYINGPANEL._displayComingSoon( dildoID, dildoHash, buttonID );
 	};
 
-	window._DG_BUYINGPANEL._displayComingSoon = function( vaseID, vaseHash, buttonID ) {
+	window._DG_BUYINGPANEL._displayComingSoon = function( dildoID, dildoHash, buttonID ) {
 	    console.debug( "Coming soon. (buttonID=" + buttonID + ")" );
 	    $( "#" + buttonID ).val( "Coming Soon" );
 	};

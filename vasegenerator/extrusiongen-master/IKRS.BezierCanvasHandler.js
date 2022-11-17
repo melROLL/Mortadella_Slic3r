@@ -38,8 +38,8 @@ IKRS.BezierCanvasHandler = function() {
 
     this.millimeterPerPixel    = 0.5
 
-    this.canvasWidth           = _VASE_CONFIG.BEZIER_CANVAS_WIDTH;  // canvas_width;
-    this.canvasHeight          = _VASE_CONFIG.BEZIER_CANVAS_HEIGHT; // canvas_height;
+    this.canvasWidth           = _DILDO_CONFIG.BEZIER_CANVAS_WIDTH;  // canvas_width;
+    this.canvasHeight          = _DILDO_CONFIG.BEZIER_CANVAS_HEIGHT; // canvas_height;
 
     this.canvas                = document.getElementById("bezier_canvas");
     this.context               = this.canvas.getContext( "2d" );
@@ -83,7 +83,7 @@ IKRS.BezierCanvasHandler = function() {
 
     this.backgroundImage              = null; // undefined;
     this.customBackgroundImage        = null;
-    this.loadBackgroundImage( _VASE_CONFIG.IMAGES.BEZIER_BACKGROUND, // "bg_bezier.png", 
+    this.loadBackgroundImage( _DILDO_CONFIG.IMAGES.BEZIER_BACKGROUND, // "bg_bezier.png", 
 			      true             // redraw when ready
 			    ); 
     this.drawCustomBackgroundImage    = true;
@@ -347,8 +347,8 @@ IKRS.BezierCanvasHandler.prototype._drawAnonymousBackgroundImage = function( ima
 	keepRatio = false;
 
 
-    var contextWidth  = _VASE_CONFIG.BEZIER_CANVAS_WIDTH; // this.canvasWidth; // 512;
-    var contextHeight = _VASE_CONFIG.BEZIER_CANVAS_HEIGHT; // this.canvasHeight; // 768;
+    var contextWidth  = _DILDO_CONFIG.BEZIER_CANVAS_WIDTH; // this.canvasWidth; // 512;
+    var contextHeight = _DILDO_CONFIG.BEZIER_CANVAS_HEIGHT; // this.canvasHeight; // 768;
     
 
     var imageWidth  = image.width;

@@ -10,13 +10,13 @@
 ( function($) {
 
     /**
-     * @param hash   - The vase hash.
+     * @param hash   - The dildo hash.
      * @param id     - yeahmm ... the id.
      * @param rating - in [0..5]
      **/
     window.dg_sendRatingRequest = function( hash, id, rating ) {
 
-	$.ajax( { url     : "//www.vase-generator.com/gallery/addRating.ajax.php",
+	$.ajax( { url     : "//www.dildo-generator.com/gallery/addRating.ajax.php",
 		  type    : get,
 		  data    : { "public_hash" : hash,
 			      "id"          : id,

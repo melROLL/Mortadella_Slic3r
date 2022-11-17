@@ -1,6 +1,6 @@
 <?php
 /**
- * This script can be used to store vase settings on a remote or local databse server.
+ * This script can be used to store dildo settings on a remote or local databse server.
  *
  * It is NOT IN USE by the default settings, but an example for how to do it.
  *
@@ -11,25 +11,25 @@
  * @modified 2014-07-02 Ikaros Kappler (changed the submit method to HTTP POST).
  * @modified 2014-07-13 Ikaros Kappler (added IP check).
  * @modified 2014-07-16 Ikaros Kappler (added additional publishing data: user_name, email_address, ...).
- * @modified 2014-07-24 Ikaros Kappler (updating designs is now opt-out by $_VASE_UPDATE_ALLOWED for security reasons).
+ * @modified 2014-07-24 Ikaros Kappler (updating designs is now opt-out by $_DILDO_UPDATE_ALLOWED for security reasons).
  * @version  1.0.2
  **/
 
 header( "Content-Type: text/plain; charset=utf-8" );
 
-$your_mail_address     = "published@vase-generator.com";
-$_VASE_UPDATE_ALLOWED = FALSE;
+$your_mail_address     = "published@dildo-generator.com";
+$_DILDO_UPDATE_ALLOWED = FALSE;
 
 
 
 // Fetch the params from the GET or the POST request.
-// (Better send vase data via HTTP POST?)
+// (Better send dildo data via HTTP POST?)
 if( $_SERVER['REQUEST_METHOD'] == "POST" ) {
   $bend                = $_POST["bend"];
   $id                  = $_POST["id"];
   $public_hash         = $_POST["public_hash"];
   $bezier_path         = $_POST["bezier_path"];
-  $vase_name          = $_POST["vase_name"];
+  $dildo_name          = $_POST["dildo_name"];
   $user_name           = $_POST["user_name"];
   $email_address       = $_POST["email_address"];
   $hide_email_address  = $_POST["hide_email_address"];
@@ -57,8 +57,8 @@ $origin_decoded  = base64_decode( $originb64_clean,
 				  );
 
 if( $_SERVER["SERVER_ADDR"] != "127.0.0.1" && 
-    base64_decode($originb64_clean) != "www.vase-generator.com" &&
-    base64_decode($originb64_clean) != "vase-generator.com"
+    base64_decode($originb64_clean) != "www.dildo-generator.com" &&
+    base64_decode($originb64_clean) != "dildo-generator.com"
     ) {
 
   //die( "1 " . base64_decode($originb64_clean) );
@@ -117,7 +117,7 @@ if( !$id || $id == -1 || !$public_hash ) {
   
 
   $query =
-    "INSERT INTO " . addslashes($db_name) . ".custom_vases " .
+    "INSERT INTO " . addslashes($db_name) . ".custom_dildos " .
     "( bend, date_created, date_updated, bezier_path, user_id, name, user_name, email_address, hide_email_address, allow_download, allow_edit, preview_image, bezier_image, public_hash, disabled_by_moderator, keywords ) " .
     "VALUES ( " .
     "'" . addslashes($bend) . "', " .
@@ -125,7 +125,7 @@ if( !$id || $id == -1 || !$public_hash ) {
     "'" . addslashes(time()) . "', " .
     "'" . addslashes($bezier_path) . "', " .
     "'" . addslashes($user_id) . "', ".
-    "'" . addslashes($vase_name) . "', " .
+    "'" . addslashes($dildo_name) . "', " .
     "'" . addslashes($user_name) . "', " .
     "'" . addslashes($email_address) . "', " .
     "'" . ($hide_email_address ? 'Y' : 'N') . "', " .
@@ -139,18 +139,18 @@ if( !$id || $id == -1 || !$public_hash ) {
     ");";
 
 } else {
-  if( !$_VASE_UPDATE_ALLOWED ) {
+  if( !$_DILDO_UPDATE_ALLOWED ) {
     header( "HTTP/1.1 500 Update not allowed.", TRUE ); 
     mysql_close( $mcon );
     die();
   } else {
     $query = 
-      "UPDATE " . addslashes($db_name) . ".custom_vases SET " .
+      "UPDATE " . addslashes($db_name) . ".custom_dildos SET " .
       "bend                  = '" . addslashes($bend) . "', " .
       "date_updated          = '" . addslashes(time()) . "', " .
       "bezier_path           = '" . addslashes($bezier_path) . "', " .
       //"user_id               = '" . addslashes($user_id) . "', " .
-      "name                  = '" . addslashes($vase_name) . "', " .
+      "name                  = '" . addslashes($dildo_name) . "', " .
       "user_name             = '" . addslashes($user_name) . "', " .
       "email_address         = '" . addslashes($email_address) . "', " .
       "hide_email_address    = '" . ($hide_email_address ? 'Y' : 'N') . "', " .
@@ -196,8 +196,8 @@ if( !mysql_query($query,$mcon) ) {
   echo $errmsg;
   
   mail( $your_mail_address, 
-	"Failed to store vase!", 
-	"Failed to store vase\n" .
+	"Failed to store dildo!", 
+	"Failed to store dildo\n" .
 	   $message . $errmsg 
 	);
 	
@@ -206,8 +206,8 @@ if( !mysql_query($query,$mcon) ) {
 
   // This was an UPDATE. 
   mail( $your_mail_address, 
-	"Vase (id=" . $id . ") was updated!", 
-	$message . "Vase was updated. ID=" . $id . ", hash=" . $public_hash . "\n" 
+	"Dildo (id=" . $id . ") was updated!", 
+	$message . "Dildo was updated. ID=" . $id . ", hash=" . $public_hash . "\n" 
 	);
   
 
@@ -216,8 +216,8 @@ if( !mysql_query($query,$mcon) ) {
   // This was an INSERT.
   $id  = mysql_insert_id($mcon);
   mail( $your_mail_address, 
-	"Vase (id=" . $id . ") was stored!", 
-	$message . "Vase was stored. ID=" . $id . ", hash=" . $public_hash . "\n" 
+	"Dildo (id=" . $id . ") was stored!", 
+	$message . "Dildo was stored. ID=" . $id . ", hash=" . $public_hash . "\n" 
 	);
 
 }

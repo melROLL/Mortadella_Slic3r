@@ -15,14 +15,14 @@
  **/
 
 
-if( !_VASE_PRESETS || typeof _VASE_PRESETS === "undefined" )
-    var _VASE_PRESETS = {};
+if( !_DILDO_PRESETS || typeof _DILDO_PRESETS === "undefined" )
+    var _DILDO_PRESETS = {};
 
 
 /**
  * Note that the bezier JSON member names need to be put into double quotes.
  **/
-_VASE_PRESETS.plugs = { label:    "Plugs",
+_DILDO_PRESETS.plugs = { label:    "Plugs",
 			 elements: [
 
 			     { name:        "bender",
@@ -68,7 +68,7 @@ _VASE_PRESETS.plugs = { label:    "Plugs",
 
 
 
-function populate_vase_presets_menu( presets ) {
+function populate_dildo_presets_menu( presets ) {
 
 
     for( var category_name in presets ) {
@@ -81,7 +81,7 @@ function populate_vase_presets_menu( presets ) {
 	for( var i in category.elements ) {
 
 	    var preset      = category.elements[i];
-	    document.write( "<li><a href=\"#\" onclick=\"setBezierPathFromJSON(_VASE_PRESETS." + category_name + ".elements[" + i + "].bezier_json,_VASE_PRESETS." + category_name + ".elements[" + i + "].bend_angle);\">" + preset.label + "</a></li>\n" );
+	    document.write( "<li><a href=\"#\" onclick=\"setBezierPathFromJSON(_DILDO_PRESETS." + category_name + ".elements[" + i + "].bezier_json,_DILDO_PRESETS." + category_name + ".elements[" + i + "].bend_angle);\">" + preset.label + "</a></li>\n" );
 	    
 	}
 	

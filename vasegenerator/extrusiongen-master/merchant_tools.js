@@ -14,7 +14,7 @@
  * The url param may contain the %json_data% placeholder.
  *
  * It will be replace by a JSON object that describes the current settings for the
- * vase generator.
+ * dildo generator.
  *
  **/
 var seen = [];
@@ -40,11 +40,11 @@ function _order_send_to_server( url ) {
     var json_object = ZipFileExporter._build_export_data(); 
 
 
-    // Fetch the vaseID (if already saved before)
-    //var vaseID     = -1;
-    //if( document.getElementById("vaseID") )
-    //vaseID = document.getElementById("vaseID").value;
-    var vaseID = getCurrentVaseID();
+    // Fetch the dildoID (if already saved before)
+    //var dildoID     = -1;
+    //if( document.getElementById("dildoID") )
+    //dildoID = document.getElementById("dildoID").value;
+    var dildoID = getCurrentDildoID();
 
     var newURL     = url;
     newURL         = newURL.replace( new RegExp("%bezier_path%", 'g'), 
@@ -54,7 +54,7 @@ function _order_send_to_server( url ) {
 				     json_object.meshSettings.bendAngle        
 				   );
     newURL         = newURL.replace( new RegExp("%id%", 'g'), 
-				     vaseID        
+				     dildoID        
 				   );
     
 
@@ -63,21 +63,21 @@ function _order_send_to_server( url ) {
     /* 
     
     window.open( newURL, 
-		 "store_custom_vase",  // window name
+		 "store_custom_dildo",  // window name
 		 "height=600,width=600" // Params
 	       );
     */
 
     // This is the new version: an AJAX script that runs in background
     _asynchronousURLCall( newURL, 
-			  vaseID,
+			  dildoID,
 			  json_object 
 			);
 
 }
 
 function _asynchronousURLCall( url, 
-			       vaseID, 
+			       dildoID, 
 			       json_object 
 			     ) {
 
@@ -90,7 +90,7 @@ function _asynchronousURLCall( url,
 
     // Build POST data
     var postData  = 
-	"id="          + vaseID                             + "&" +
+	"id="          + dildoID                             + "&" +
 	"bend="        + json_object.meshSettings.bendAngle  + "&" +
 	"bezier_path=" + json_object.bezierPath.toJSON()     + "&" +
 	"origin"       + originb64;
@@ -103,29 +103,29 @@ function _asynchronousURLCall( url,
 		// Everything OK. Model saved.
 		
 		// Fetch the ID.
-		var vaseID = request.responseText;
+		var dildoID = request.responseText;
 		
 		// Check if numeric
-		if( IKRS.Utils.isNumeric(vaseID) ) {
+		if( IKRS.Utils.isNumeric(dildoID) ) {
 		    
 		    // (Re-)Store the ID into the HTML form (for later updates)
 		    messageBox.show( "<br/>\n" +
 				     "Your settings have been saved.<br/>\n" +
-				     "(vaseID=" + vaseID + ")<br/>\n" +
+				     "(dildoID=" + dildoID + ")<br/>\n" +
 				     "<br/>\n" +
 				     "<button onclick=\"messageBox.hide()\">OK</button>\n"
 				   );
-		    setStatus( "Your settings have been saved. (id=" + vaseID + ")" );
-		    //document.getElementById( "vaseID" ).value = vaseID;
-		    setCurrentVaseID( vaseID, "" ); // no hash here
+		    setStatus( "Your settings have been saved. (id=" + dildoID + ")" );
+		    //document.getElementById( "dildoID" ).value = dildoID;
+		    setCurrentDildoID( dildoID, "" ); // no hash here
 
 		} else {
 		    
 		    window.alert("X");
 		    // Returned ID is NOT numeric.
-		    console.log( "Vase was saved but returned ID is not numeric (" + vaseID + ")." );
-		    setStatus( "Vase was saved but returned ID is not numeric (" + vaseID + ")." );
-		    messageBox.show( "<br/>Vase was saved but returned ID is not numeric (" + vaseID + ").<br/>\n" +
+		    console.log( "Dildo was saved but returned ID is not numeric (" + dildoID + ")." );
+		    setStatus( "Dildo was saved but returned ID is not numeric (" + dildoID + ")." );
+		    messageBox.show( "<br/>Dildo was saved but returned ID is not numeric (" + dildoID + ").<br/>\n" +
 				     "<br/>\n" +
 				     "<button onclick=\"messageBox.hide()\">OK</button>\n" );
 		    
