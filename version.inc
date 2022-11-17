@@ -20,7 +20,7 @@ set(GCODEVIEWER_APP_KEY "${SLIC3R_APP_KEY}-gcodeviewer")
 set(GCODEVIEWER_APP_CMD "${SLIC3R_APP_CMD}-gcodeviewer")
 
 # string to be added after the SLIC3R_APP_NAME on some places
-set(SLIC3R_BASED_ON " based on PrusaSlicer")
+set(SLIC3R_BASED_ON " for WASP Printers")
 # to get he github repo
 set(SLIC3R_GITHUB "supermerill/SuperSlicer")
 # download url
