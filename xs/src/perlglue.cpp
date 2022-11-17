@@ -288,6 +288,8 @@ bool ConfigBase__set(ConfigBase* THIS, const t_config_option_key &opt_key, SV* v
     return true;
 }
 
+/* This method is implemented as a workaround for this typemap bug:
+   https://rt.cpan.org/Public/Bug/Display.html?id=94110 */
 bool ConfigBase__set_deserialize(ConfigBase* THIS, const t_config_option_key &opt_key, SV* str)
 {
     size_t len;
