@@ -1550,8 +1550,8 @@ static const wxString sep_space = "";
 static wxMenu* generate_help_menu()
 {
     wxMenu* helpMenu = new wxMenu();
-    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Wasp Website")), wxString::Format(_L("Open the %s releases page in your browser"), SLIC3R_APP_NAME),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog(SLIC3R_DOWNLOAD, nullptr, false); });
+    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Wasp Website")), wxString::Format(_L("Open the Wasp Website in your browser")),
+        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://www.3dwasp.com"); });
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Printers Manual")), wxString::Format(_L("Open the %s wiki in your browser"), SLIC3R_APP_NAME),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("https://www.3dwasp.com/download/"); });
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Vase Generator")), _L("Open the Slic3r website in your browser"),
