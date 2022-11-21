@@ -22,4 +22,3 @@ deps/deps-*
 # MacOS Ignores
 .DS_Store
 
-*.bak
