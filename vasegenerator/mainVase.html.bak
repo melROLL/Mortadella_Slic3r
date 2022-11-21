@@ -12,7 +12,7 @@
 
 <style type="text/css" media="screen">
   body {
-  background-color: #6c6c6c;
+  background-color: #D8D8D8;
   }
 </style>
 <script src="js/function.isDildoGeneratorDomain.js" type="text/javascript"></script>
@@ -30,17 +30,29 @@
 
 <div id="gallery_links">
   Draw here and then clic on Rebuild in Advance Settings:
+
 </div>
+
+
 <div id="donations">
+
 </form>
+
+
+
 </div>
+
 
 <div id="license">
   <br/>
+
+
   <br/>
   <br/>
+
   <br/>
   <script>
+
     </script>
 </div>
 

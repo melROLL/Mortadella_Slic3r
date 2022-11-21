@@ -13,6 +13,10 @@
 #include <wx/sizer.h>
 #include <wx/tooltip.h>
 
+#include <iostream>
+#include <fstream>
+#include <windows.h>
+
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/log/trivial.hpp>
 
@@ -1522,16 +1526,12 @@ void MainFrame::on_sys_color_changed()
     if (!wxGetApp().tabs_as_menu())
         dynamic_cast<Notebook*>(m_tabpanel)->Rescale();
 #endif
-
     // update Plater
     wxGetApp().plater()->sys_color_changed();
-
     // update Tabs
     for (auto tab : wxGetApp().tabs_list)
         tab->sys_color_changed();
-
     MenuFactory::sys_color_changed(m_menubar);
-
     this->Refresh();
 }
 
@@ -1550,27 +1550,23 @@ static const wxString sep_space = "";
 static wxMenu* generate_help_menu()
 {
     wxMenu* helpMenu = new wxMenu();
+
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Wasp Website")), wxString::Format(_L("Open the Wasp Website in your browser")),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://www.3dwasp.com"); });
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Printers Manual")), wxString::Format(_L("Open the %s wiki in your browser"), SLIC3R_APP_NAME),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("https://www.3dwasp.com/download/"); });
+        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://www.3dwasp.com/download/"); });
 helpMenu->AppendSeparator();        
-    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Vase Generator")), _L("Open the Slic3r website in your browser"),
+
+    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Christmas Tree Generator")), _L("Open the Christmas Tree Generator in your browser"),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
-append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Vase Generator")), _L("Open the Slic3r website in your browser"),
+append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Glass Generator")), _L("Open the Glass Generator in your browser"),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
 helpMenu->AppendSeparator();
-    //#        my $versioncheck = $self->_append_menu_item($helpMenu, "Check for &Updates...", "Check for new Slic3r versions", sub{
-    //#            wxTheApp->check_version(1);
-    //#        });
-    //#        $versioncheck->Enable(wxTheApp->have_version_check);
+
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Slic3r Manual")),
         wxString::Format(_L("Open the Slic3r Manual in your browser")),
-        //            [this](wxCommandEvent&) { wxGetApp().open_web_page_localized("http://manual.slic3r.org"); });
-        //        append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("%s &Manual"), SLIC3R_APP_NAME),
-        //                                             wxString::Format(_L("Open the %s manual in your browser"), SLIC3R_APP_NAME),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://manual.slic3r.org/"); });
-    helpMenu->AppendSeparator();
+              [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://manual.slic3r.org/"); });
+
     append_menu_item(helpMenu, wxID_ANY, _L("System &Info"), _L("Show system information"),
         [](wxCommandEvent&) { wxGetApp().system_info(); });
     append_menu_item(helpMenu, wxID_ANY, _L("Show &Configuration Folder"), _L("Show user configuration folder (datadir)"),
@@ -1593,6 +1589,7 @@ helpMenu->AppendSeparator();
     helpMenu->AppendSeparator();
     append_menu_item(helpMenu, wxID_ANY, "DEBUG gcode thumbnails", "DEBUG ONLY - read the selected gcode file and generates png for the contained thumbnails",
         [](wxCommandEvent&) { wxGetApp().gcode_thumbnails_debug(); });
+
 #endif // ENABLE_THUMBNAIL_GENERATOR_DEBUG
 
     return helpMenu;
