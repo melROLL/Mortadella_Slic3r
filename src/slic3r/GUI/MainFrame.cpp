@@ -1554,22 +1554,19 @@ static wxMenu* generate_help_menu()
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://www.3dwasp.com"); });
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Printers Manual")), wxString::Format(_L("Open the %s wiki in your browser"), SLIC3R_APP_NAME),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("https://www.3dwasp.com/download/"); });
-    helpMenu->AppendSeparator(); // here are the extrusions and rotations generators
-    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Glass Generator")), _L("Open the Glass Generator in your browser"),
+    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Vase Generator")), _L("Open the Slic3r website in your browser"),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
-    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Christmas Tree Generator")), _L("Open the Christmas Tree Generator in your browser"),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
-
-
+    //#        my $versioncheck = $self->_append_menu_item($helpMenu, "Check for &Updates...", "Check for new Slic3r versions", sub{
+    //#            wxTheApp->check_version(1);
+    //#        });
+    //#        $versioncheck->Enable(wxTheApp->have_version_check);
+    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Slic3r Manual")),
+        wxString::Format(_L("Open the Slic3r Manual in your browser")),
         //            [this](wxCommandEvent&) { wxGetApp().open_web_page_localized("http://manual.slic3r.org"); });
         //        append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("%s &Manual"), SLIC3R_APP_NAME),
         //                                             wxString::Format(_L("Open the %s manual in your browser"), SLIC3R_APP_NAME),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://manual.slic3r.org/"); });
     helpMenu->AppendSeparator();
-    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("SuperSlicer Wiki")), wxString::Format(_L("Open the SuperSlicer wiki in your browser")),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("https://github.com/supermerill/SuperSlicer/wiki"); });
-            append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Slic3r Manual")),
-        wxString::Format(_L("Open the Slic3r Manual in your browser")),
     append_menu_item(helpMenu, wxID_ANY, _L("System &Info"), _L("Show system information"),
         [](wxCommandEvent&) { wxGetApp().system_info(); });
     append_menu_item(helpMenu, wxID_ANY, _L("Show &Configuration Folder"), _L("Show user configuration folder (datadir)"),
