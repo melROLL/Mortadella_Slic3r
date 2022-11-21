@@ -1554,8 +1554,12 @@ static wxMenu* generate_help_menu()
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://www.3dwasp.com"); });
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Printers Manual")), wxString::Format(_L("Open the %s wiki in your browser"), SLIC3R_APP_NAME),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("https://www.3dwasp.com/download/"); });
+helpMenu->AppendSeparator();        
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Vase Generator")), _L("Open the Slic3r website in your browser"),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
+append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Vase Generator")), _L("Open the Slic3r website in your browser"),
+        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
+helpMenu->AppendSeparator();
     //#        my $versioncheck = $self->_append_menu_item($helpMenu, "Check for &Updates...", "Check for new Slic3r versions", sub{
     //#            wxTheApp->check_version(1);
     //#        });
