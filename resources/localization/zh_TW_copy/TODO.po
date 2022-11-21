@@ -6191,7 +6191,7 @@ msgstr ""
 #: src/slic3r/GUI/ConfigWizard.cpp:509
 #, possible-c-format, possible-boost-format
 msgid ""
-"Ciao, welcome to %s! This %s helps you with the initial configuration; just "
+"Hello, welcome to %s! This %s helps you with the initial configuration; just "
 "a few settings and you will be ready to print."
 msgstr ""
 

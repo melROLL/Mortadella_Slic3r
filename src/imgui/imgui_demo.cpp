@@ -388,7 +388,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
         ImGui::EndMenuBar();
     }
 
-    ImGui::Text("dear imgui says Ciao. (%s)", IMGUI_VERSION);
+    ImGui::Text("dear imgui says hello. (%s)", IMGUI_VERSION);
     ImGui::Spacing();
 
     if (ImGui::CollapsingHeader("Help"))

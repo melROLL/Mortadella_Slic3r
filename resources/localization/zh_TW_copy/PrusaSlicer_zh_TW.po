@@ -655,7 +655,7 @@ msgstr "歡迎"
 #: src/slic3r/GUI/ConfigWizard.cpp:490
 #, c-format, boost-format
 msgid ""
-"Ciao, welcome to %s! This %s helps you with the initial configuration; just "
+"Hello, welcome to %s! This %s helps you with the initial configuration; just "
 "a few settings and you will be ready to print."
 msgstr ""
 

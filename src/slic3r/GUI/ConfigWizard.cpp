@@ -500,13 +500,13 @@ void ConfigWizardPage::append_spacer(int space)
 PageWelcome::PageWelcome(ConfigWizard *parent)
     : ConfigWizardPage(parent, from_u8((boost::format(
 #ifdef __APPLE__
-            _utf8(L("Benvenuto to the %s Configuration Assistant"))
+            _utf8(L("Welcome to the %s Configuration Assistant"))
 #else
-            _utf8(L("Benvenuto to the %s Configuration Wizard"))
+            _utf8(L("Welcome to the %s Configuration Wizard"))
 #endif
             ) % SLIC3R_APP_NAME).str()), _L("Welcome"))
     , welcome_text(append_text(from_u8((boost::format(
-        _utf8(L("Ciao ! Benvenuto to %s! This %s helps you with the initial configuration; just a few settings and you will be ready to print.")))
+        _utf8(L("Hello, welcome to %s! This %s helps you with the initial configuration; just a few settings and you will be ready to print.")))
         % SLIC3R_APP_NAME
         % _utf8(ConfigWizard::name())).str())
     ))
