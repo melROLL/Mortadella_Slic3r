@@ -1975,6 +1975,13 @@ void MainFrame::init_menubar_as_editor()
         generationMenu->AppendSeparator();
         append_menu_item(generationMenu, wxID_ANY, _(L("Mosaic from picture")), _(L("Create an mosaic-like tile with filament changes.")),
             [this](wxCommandEvent&) { wxGetApp().tiled_canvas_dialog(); });
+ generationMenu->AppendSeparator();        
+
+    append_menu_item(otherMenu, wxID_ANY, wxString::Format(_L("Christmas Tree Generator")), _L("Open the Christmas Tree Generator in your browser"),
+        [](wxCommandEvent&) { wxGetApp().wxLaunchDefaultBrowser("file:///../vasegenerator/mainVase.html"); });
+append_menu_item(otherMenu, wxID_ANY, wxString::Format(_L("Glass Generator")), _L("Open the Glass Generator in your browser"),
+        [](wxCommandEvent&) { wxGetApp().wxLaunchDefaultBrowser("../../vasegenerator/mainVase.html"); });
+
 
     }
 
