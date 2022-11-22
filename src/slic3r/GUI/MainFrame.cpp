@@ -1554,13 +1554,12 @@ static wxMenu* generate_help_menu()
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Wasp Website")), wxString::Format(_L("Open the Wasp Website in your browser")),
         [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://www.3dwasp.com"); });
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Printers Manual")), wxString::Format(_L("Open the %s wiki in your browser"), SLIC3R_APP_NAME),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://www.3dwasp.com/download/"); });
-helpMenu->AppendSeparator();        
+ helpMenu->AppendSeparator();        
 
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Christmas Tree Generator")), _L("Open the Christmas Tree Generator in your browser"),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
+        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("file:///C:/Users/melvy/OneDrive/Documents/GitHub/Mortadella_Slic3r/src/vasegenerator/mainVase.html"); });
 append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Glass Generator")), _L("Open the Glass Generator in your browser"),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("http://slic3r.org"); });
+        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("../../vasegenerator/mainVase.html"); });
 helpMenu->AppendSeparator();
 
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Slic3r Manual")),
