@@ -2087,7 +2087,7 @@ void MainFrame::init_menubar_as_gcodeviewer()
     if (viewMenu != nullptr) m_menubar->Append(viewMenu, _L("&View"));
     // Add additional menus from C++
     wxGetApp().add_config_menu(m_menubar);
-    m_menubar->Append(helpMenu, _L("&Help"));
+    m_menubar->Append(helpMenu, _L("&Other"));
     SetMenuBar(m_menubar);
 
 #ifdef __APPLE__

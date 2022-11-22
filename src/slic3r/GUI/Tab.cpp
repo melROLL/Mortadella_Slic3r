@@ -2257,7 +2257,7 @@ std::vector<Slic3r::GUI::PageShp> Tab::create_pages(std::string setting_type_nam
                 //return description_line_widget(parent, &(tab->m_recommended_extrusion_width_description_line));
 
                 auto sizer = new wxBoxSizer(wxVERTICAL);
-                wxCollapsiblePane* collpane = new wxCollapsiblePane(parent, wxID_ANY, _L("Help / Details:"));
+                wxCollapsiblePane* collpane = new wxCollapsiblePane(parent, wxID_ANY, _L("Other / Details:"));
                 wxGetApp().UpdateDarkUI(collpane);
                 // add the pane with a zero proportion value to the 'sz' sizer which contains it
                 sizer->Add(collpane, 0, wxGROW | wxALL, 5);
