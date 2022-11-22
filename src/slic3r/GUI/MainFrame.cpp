@@ -15,7 +15,6 @@
 
 #include <iostream>
 #include <fstream>
-#include <windows.h>
 
 #include <boost/algorithm/string/predicate.hpp>
 #include <boost/log/trivial.hpp>
