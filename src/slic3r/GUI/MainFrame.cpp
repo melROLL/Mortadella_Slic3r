@@ -1978,9 +1978,9 @@ void MainFrame::init_menubar_as_editor()
 
  generationMenu->AppendSeparator();        
     append_menu_item(generationMenu, wxID_ANY, wxString::Format(_L("Christmas Tree Generator")), _L("Open the Christmas Tree Generator in your browser"),
-        [this](wxCommandEvent&) { wxGetApp().wxLaunchDefaultBrowser("file:///../vasegenerator/mainVase.html"); });
+        [this](wxCommandEvent&) { wxLaunchDefaultBrowser("file:///../vasegenerator/mainVase.html"); });
 append_menu_item(generationMenu, wxID_ANY, wxString::Format(_L("Glass Generator")), _L("Open the Glass Generator in your browser"),
-        [this](wxCommandEvent&) { wxGetApp().wxLaunchDefaultBrowser("../../vasegenerator/mainVase.html"); });
+        [this](wxCommandEvent&) { wxLaunchDefaultBrowser("../../vasegenerator/mainVase.html"); });
 
 
     }
