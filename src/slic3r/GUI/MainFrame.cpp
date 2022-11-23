@@ -1557,10 +1557,6 @@ static wxMenu* generate_help_menu()
 
  helpMenu->AppendSeparator();        
 
-    append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Christmas Tree Generator")), _L("Open the Christmas Tree Generator in your browser"),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("file://../../vasegenerator/mainVase.html"); });
-append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Glass Generator")), _L("Open the Glass Generator in your browser"),
-        [](wxCommandEvent&) { wxGetApp().open_browser_with_warning_dialog("../../vasegenerator/mainVase.html"); });
 helpMenu->AppendSeparator();
 
     append_menu_item(helpMenu, wxID_ANY, wxString::Format(_L("Slic3r Manual")),
@@ -1963,7 +1959,7 @@ void MainFrame::init_menubar_as_editor()
             [this](wxCommandEvent&) { wxGetApp().calibration_cube_dialog(); });
     }
 
-    // objects menu
+    // generation menu
     wxMenu* generationMenu = nullptr;
     if (wxGetApp().is_editor())
     {
@@ -1978,7 +1974,7 @@ void MainFrame::init_menubar_as_editor()
 
  generationMenu->AppendSeparator();        
     append_menu_item(generationMenu, wxID_ANY, wxString::Format(_L("Christmas Tree Generator")), _L("Open the Christmas Tree Generator in your browser"),
-        [this](wxCommandEvent&) { wxLaunchDefaultBrowser("file:///../vasegenerator/mainVase.html"); });
+        [this](wxCommandEvent&) { wxLaunchDefaultBrowser("file:///../../vasegenerator/mainVase.html"); });
 append_menu_item(generationMenu, wxID_ANY, wxString::Format(_L("Glass Generator")), _L("Open the Glass Generator in your browser"),
         [this](wxCommandEvent&) { wxLaunchDefaultBrowser("../../vasegenerator/mainVase.html"); });
 
